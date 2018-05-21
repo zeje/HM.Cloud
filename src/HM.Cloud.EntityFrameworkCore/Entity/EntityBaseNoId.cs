@@ -14,17 +14,17 @@ namespace HM.Cloud.EntityFrameworkCore
         public EntityBaseNoId()
         {
             CreateTime = DateTime.Now;
-            ModifyTime = DateTime.Now;
+            UpdateTime = DateTime.Now;
         }
         /// <summary>
         /// 创建人
         /// </summary>
-        [StringLength(Account.AccountNameLength)]
+        [StringLength(EntityConst.AccountNameLength)]
         public virtual string CreateUser { get; set; }
         /// <summary>
         /// 修改人
         /// </summary>
-        [StringLength(Account.AccountNameLength)]
+        [StringLength(EntityConst.AccountNameLength)]
         public virtual string UpdateUser { get; set; }
         /// <summary>
         /// 创建时间
