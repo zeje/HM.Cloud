@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
-
 namespace HM.Cloud.EntityFrameworkCore
 {
     /// <summary>
@@ -12,14 +12,20 @@ namespace HM.Cloud.EntityFrameworkCore
         /// <summary>
         /// 软件名称
         /// </summary>
+        [Required]
+        [MaxLength(32)]
         public string SoftName { get; set; }
         /// <summary>
         /// 版本
         /// </summary>
+        [Required]
+        [MaxLength(32)]
         public string Version { get; set; }
         /// <summary>
         /// 更新文件下载地址
         /// </summary>
+        [Required]
+        [MaxLength(128)]
         public string Url { get; set; }
         /// <summary>
         /// 变更日志

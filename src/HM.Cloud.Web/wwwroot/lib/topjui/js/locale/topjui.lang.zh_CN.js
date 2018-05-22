@@ -4,7 +4,7 @@ if ($.fn.pagination) {
     $.fn.pagination.defaults.displayMsg = '显示{from}到{to},共{total}记录';
 }
 if ($.fn.datagrid) {
-    $.fn.datagrid.defaults.loadMsg = '正在加载，请稍待。。。';
+    $.fn.datagrid.defaults.loadMsg = '加载中，请稍候...';
 }
 if ($.fn.treegrid && $.fn.datagrid) {
     $.fn.treegrid.defaults.loadMsg = $.fn.datagrid.defaults.loadMsg;
@@ -13,12 +13,28 @@ if ($.messager) {
     $.messager.defaults.ok = '确定';
     $.messager.defaults.cancel = '取消';
 }
-$.map(['validatebox', 'textbox', 'passwordbox', 'filebox', 'searchbox',
-    'combo', 'combobox', 'combogrid', 'combotree',
-    'datebox', 'datetimebox', 'numberbox',
-    'spinner', 'numberspinner', 'timespinner', 'datetimespinner'], function (plugin) {
+$.map(['iValidatebox', 'iTextbox', 'iPasswordbox', 'iFilebox', 'iSearchbox',
+    'iCombo', 'iCombobox', 'iCombogrid', 'iCombotree', 'iCombotreegrid',
+    'iDatebox', 'iDatetimebox', 'iTagbox', 'iNumberbox',
+    'iSpinner', 'iNumberspinner', 'iTimespinner', 'iDatetimespinner'], function (plugin) {
+    var _plugin = plugin.toLowerCase().substr(1);
+    if ($.fn[_plugin]) {
+        $.fn[_plugin].defaults.missingMessage = '必填';
+    }
     if ($.fn[plugin]) {
         $.fn[plugin].defaults.missingMessage = '必填';
+    }
+});
+$.map(['iValidatebox', 'iTextbox', 'iPasswordbox', 'iFilebox', 'iSearchbox',
+    'iCombo', 'iCombobox', 'iCombogrid', 'iCombotree', 'iCombotreegrid',
+    'iDatebox', 'iDatetimebox', 'iTagbox', 'iNumberbox',
+    'iSpinner', 'iNumberspinner', 'iTimespinner', 'iDatetimespinner', 'iLinkbutton', 'iSwitchbutton'], function (plugin) {
+    var _plugin = plugin.toLowerCase().substr(1);
+    if ($.fn[_plugin]) {
+        $.fn[_plugin].defaults.height = 30;
+    }
+    if ($.fn[plugin]) {
+        $.fn[plugin].defaults.height = 30;
     }
 });
 if ($.fn.validatebox) {
@@ -65,6 +81,13 @@ if ($.fn.datetimespinner) {
     $.fn.datetimespinner.defaults.selections = [[0, 4], [5, 7], [8, 10], [11, 13], [14, 16], [17, 19]]
 }
 
+//自定义汉化信息
+if ($.fn.panel) {
+    $.fn.dialog.defaults.loadingMessage = "";
+}
+if ($.fn.edatagrid) {
+    $.fn.edatagrid.defaults.loadMsg = "加载中，请稍候...";
+}
 if ($.fn.datagrid && $.fn.datagrid.defaults && $.fn.datagrid.defaults.operators.nofilter) {
     $.fn.datagrid.defaults.operators.nofilter.text = "无";
     $.fn.datagrid.defaults.operators.contains.text = "包含";
@@ -77,3 +100,13 @@ if ($.fn.datagrid && $.fn.datagrid.defaults && $.fn.datagrid.defaults.operators.
     $.fn.datagrid.defaults.operators.greater.text = ">大于";
     $.fn.datagrid.defaults.operators.greaterorequal.text = ">=大于等于";
 }
+
+if ($.fn.combogrid) {
+    $.fn.combogrid.defaults.loadMsg = "加载中，请稍候...";
+}
+
+if ($.fn.combotreegrid) {
+    $.fn.combotreegrid.defaults.loadMsg = "加载中，请稍候...";
+}
+
+/* TopJUI默认属性 */

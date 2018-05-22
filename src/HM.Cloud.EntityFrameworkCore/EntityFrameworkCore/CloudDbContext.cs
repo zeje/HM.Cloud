@@ -7,10 +7,10 @@ namespace HM.Cloud.EntityFrameworkCore
     {
         //Add DbSet properties for your entities...
 
-        public CloudDbContext(DbContextOptions<CloudDbContext> options) 
+        public CloudDbContext(DbContextOptions<CloudDbContext> options)
             : base(options)
         {
-
         }
+        public DbSet<SoftVersion> SoftVersions { get; set; }
     }
 }

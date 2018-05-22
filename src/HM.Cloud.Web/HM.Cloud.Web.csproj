@@ -10,9 +10,28 @@
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <Description>黑猫一号云平台</Description>
+    <Copyright>版权所有 © 2018-2020 万科物业</Copyright>
+    <PackageLicenseUrl />
+    <Product>黑猫一号云平台</Product>
+    <Company>万科物业</Company>
+    <Authors>Caizz</Authors>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="wwwroot\lib\topjui\plugins\jquery\jquery.min.backup.js" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="app.config" />
+    <None Include="wwwroot\lib\topjui\images\timeaxis\log\Thumbs.db" />
+    <None Include="wwwroot\lib\topjui\js\extension\jquery.portal.js" />
+    <None Include="wwwroot\lib\topjui\js\locale\topjui.lang.en.js" />
+    <None Include="wwwroot\lib\topjui\js\locale\topjui.lang.zh_CN.js" />
+    <None Include="wwwroot\lib\topjui\js\locale\topjui.lang.zh_TW.js" />
+    <None Include="wwwroot\lib\topjui\js\topjui.core.js" />
+    <None Include="wwwroot\lib\topjui\js\topjui.core.min.js" />
+    <None Include="wwwroot\lib\topjui\js\topjui.license.js" />
     <None Update="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -26,6 +45,8 @@
     <ProjectReference Include="..\HM.Cloud.EntityFrameworkCore\HM.Cloud.EntityFrameworkCore.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.1" />
     <PackageReference Include="System.Net.Primitives" Version="4.3.0" />
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
     <PackageReference Include="Castle.LoggingFacility.MsLogging" Version="3.1.0" />

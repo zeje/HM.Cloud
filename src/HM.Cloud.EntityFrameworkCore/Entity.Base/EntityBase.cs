@@ -1,43 +1,40 @@
-﻿using System;
+﻿using Abp.Domain.Entities;
+using Abp.Domain.Entities.Auditing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
-
 namespace HM.Cloud.EntityFrameworkCore
 {
     /// <summary>
     /// 实体基类
     /// </summary>
-    public class EntityBase
+    public class EntityBase : Entity<long>, IHasCreationTime, IHasModificationTime
     {
         /// <summary>
         /// 
         /// </summary>
         public EntityBase()
         {
-            AddTime = DateTime.Now;
-            UpdateTime = DateTime.Now;
+            CreationTime = DateTime.Now;
+            LastModificationTime = DateTime.Now;
         }
-        [Key]
-        public virtual int Id { get; set; }
         /// <summary>
         /// 创建人
         /// </summary>
-        [StringLength(EntityConst.AccountNameLength)]
-        public virtual string AddUser { get; set; }
+        public virtual long CreatorUserId { get; set; }
         /// <summary>
         /// 修改人
         /// </summary>
-        [StringLength(EntityConst.AccountNameLength)]
-        public virtual string UpdateUser { get; set; }
+        public virtual long LastModifierUserId { get; set; }
         /// <summary>
         /// 创建时间
         /// </summary>
-        public virtual DateTime AddTime { get; set; }
+        public virtual DateTime CreationTime { get; set; }
         /// <summary>
-        /// 修改人
+        /// 修改时间
         /// </summary>
-        public virtual DateTime UpdateTime { get; set; }
+        public virtual DateTime? LastModificationTime { get; set; }
     }
 }
