@@ -5,24 +5,24 @@ using System.Text;
 namespace HM.Cloud
 {
     /// <summary>
-    /// 管理人员角色--实体类
+    /// 用户角色
     /// </summary>
-    public class UserRole
+    public class UserRole : EntitySysBase
     {
         /// <summary>
-        /// 管理人员Id
+        /// 用户Id
         /// </summary>
-        public long ManagerId { get; set; }
+        public Guid UserId { get; set; }
         /// <summary>
         /// 角色Id
         /// </summary>
-        public long RoleId { get; set; }
+        public Guid RoleId { get; set; }
         /// <summary>
-        /// 
+        /// 用户
         /// </summary>
-        public User Manager { get; set; }
+        public User User { get; set; }
         /// <summary>
-        /// 
+        /// 角色
         /// </summary>
         public Role Role { get; set; }
     }

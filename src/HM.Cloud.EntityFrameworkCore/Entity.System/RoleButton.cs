@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace HM.Cloud
 {
-    public class DepartmentRole : EntityBase
+    public class RoleButton : EntitySysBase
     {
-        /// <summary>
-        /// 部门Id
-        /// </summary>
-        public long DepartmentId { get; set; }
         /// <summary>
         /// 角色Id
         /// </summary>
-        public long RoleId { get; set; }
+        public Guid RoleId { get; set; }
         /// <summary>
-        /// 部门
+        /// 功能按钮Id
         /// </summary>
-        [ForeignKey("DepartmentId")]
-        public virtual Department Department { set; get; }
+        public Guid ButtonId { get; set; }
         /// <summary>
         /// 角色
         /// </summary>
         [ForeignKey("RoleId")]
-        public virtual Role Role { set; get; }
+        public virtual Role Role { get; set; }
+        /// <summary>
+        /// 按钮
+        /// </summary>
+        [ForeignKey("ButtonId")]
+        public virtual Button Button { get; set; }
     }
 }

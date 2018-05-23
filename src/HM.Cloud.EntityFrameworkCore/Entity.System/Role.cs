@@ -17,7 +17,7 @@ namespace HM.Cloud
     /// <summary>
     /// 角色信息
     /// </summary>
-    public class Role : EntityBase
+    public class Role : EntitySysBase, Abp.Domain.Entities.ISoftDelete
     {
         /// <summary>
         /// 名称
@@ -35,6 +35,18 @@ namespace HM.Cloud
         /// 角色状态
         /// </summary>
         public RoleStatus RoleStatus { get; set; }
+        /// <summary>
+        /// 是否已删除
+        /// </summary>
+        public bool IsDeleted { get; set; }
+        /// <summary>
+        /// 删除者
+        /// </summary>
+        public Guid? DeleterUserId { get; set; }
+        /// <summary>
+        /// 删除时间
+        /// </summary>
+        public DateTime? DeletionTime { get; set; }
         /// <summary>
         /// 用户角色
         /// </summary>

@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Text;
-
 namespace HM.Cloud
 {
     /// <summary>
-    /// 表格字段信息
+    /// 按钮
     /// </summary>
-    public class GridField : Permission
+    public class Button : Permission
     {
-        public GridField()
-        {
-
-        }
         /// <summary>
-        /// 下级子菜单
+        /// 样式名称
         /// </summary>
-        public ICollection<GridField> SubGridFields { get; set; }
+        [Required(AllowEmptyStrings = true)]
+        [StringLength(64)]
+        public string IconClass { get; set; }
     }
 }

@@ -3,7 +3,6 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Abp.AspNetCore.TestBase;
-using HM.Cloud.EntityFrameworkCore;
 using HM.Cloud.Tests.TestDatas;
 using AngleSharp.Dom.Html;
 using AngleSharp.Parser.Html;

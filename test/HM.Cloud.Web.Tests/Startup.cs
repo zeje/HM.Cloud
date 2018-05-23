@@ -2,7 +2,6 @@
 using Abp.AspNetCore;
 using Abp.AspNetCore.TestBase;
 using Abp.Dependency;
-using HM.Cloud.EntityFrameworkCore;
 using HM.Cloud.Web.Controllers;
 using Castle.MicroKernel.Registration;
 using Microsoft.AspNetCore.Builder;

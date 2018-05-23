@@ -34,5 +34,7 @@ namespace HM.Cloud
         /// 子页面
         /// </summary>
         public ICollection<Page> SubPages { get; set; }
+
+        public ICollection<Grid> Grids { get; set; }
     }
 }

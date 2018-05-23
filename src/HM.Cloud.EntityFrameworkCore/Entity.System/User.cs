@@ -16,7 +16,7 @@ namespace HM.Cloud
     /// <summary>
     /// 管理人员--实体类
     /// </summary>
-    public class User : EntityBase
+    public class User : EntitySysBase
     {
         public User()
         {
@@ -101,9 +101,12 @@ namespace HM.Cloud
         /// </summary>
         public DateTime PasswordSetTime { get; set; }
         /// <summary>
-        /// 所属部门Id
+        /// 所属部门
         /// </summary>
-        public ICollection<Guid> DepartmentId { get; set; }
-        public List<UserRole> ManagerRoles { get; set; }
+        public ICollection<Department> Departments { get; set; }
+        /// <summary>
+        /// 所属角色
+        /// </summary>
+        public ICollection<UserRole> UserRoles { get; set; }
     }
 }

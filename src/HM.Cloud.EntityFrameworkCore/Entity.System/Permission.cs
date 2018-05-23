@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Entities.Auditing;
+﻿using Abp.Domain.Entities;
+using Abp.Domain.Entities.Auditing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,14 +11,16 @@ namespace HM.Cloud
     /// </summary>
     public enum PermissionType
     {
+        Default = 0,
         Page = 1,
         Button = 2,
-        GridField = 3
+        Grid = 3,
+        GridField = 4
     }
     /// <summary>
     /// 权限
     /// </summary>
-    public class Permission : EntityBase, IDeletionAudited
+    public class Permission : EntitySysBase, IHasDeletionTime, ISoftDelete
     {
         public Permission()
         {
@@ -42,11 +45,11 @@ namespace HM.Cloud
         /// <summary>
         /// 父Id
         /// </summary>
-        public long ParentId { get; set; }
+        public Guid ParentId { get; set; }
         /// <summary>
         /// 序号(同级排序)
         /// </summary>
-        public int? SortNumber { get; set; }
+        public int? Sort { get; set; }
         /// <summary>
         /// 是否已删除
         /// </summary>
@@ -54,7 +57,7 @@ namespace HM.Cloud
         /// <summary>
         /// 删除者
         /// </summary>
-        public long? DeleterUserId { get; set; }
+        public Guid? DeleterUserId { get; set; }
         /// <summary>
         /// 删除时间
         /// </summary>

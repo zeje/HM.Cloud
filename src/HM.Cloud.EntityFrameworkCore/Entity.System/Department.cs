@@ -10,7 +10,7 @@ namespace HM.Cloud
     /// <summary>
     /// 部门
     /// </summary>
-    public class Department : EntityBase
+    public class Department : EntitySysBase
     {
         public Department()
         {
@@ -19,7 +19,7 @@ namespace HM.Cloud
         /// <summary>
         /// 父部门Id
         /// </summary>
-        public long ParentId { get; set; }
+        public Guid ParentId { get; set; }
         /// <summary>
         /// 名称
         /// </summary>

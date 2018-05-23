@@ -2,7 +2,6 @@ using System.Reflection;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Abp.TestBase;
-using HM.Cloud.EntityFrameworkCore;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor.MsDependencyInjection;
 using Microsoft.EntityFrameworkCore;
