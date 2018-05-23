@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     /// <summary>
     /// 用户状态
@@ -11,12 +10,9 @@ namespace HM.Cloud.EntityFrameworkCore
         异常 = 0,
         正常 = 1
     }
-
     public enum AlarmTypeEnum
     {
-
     }
-
     /// <summary>
     /// 信号分析结果
     /// </summary>

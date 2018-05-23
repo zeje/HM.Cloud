@@ -2,7 +2,7 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     [DependsOn(
         typeof(CloudCoreModule), 

@@ -1,8 +1,13 @@
 
 using System;
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
-    /// 信号分析结果迭代表（原记录未解决则更新，已解决则新增）
+    /// <summary>
+    /// 信号分析结果迭代
+    /// <![CDATA[
+    /// （原记录未解决则更新，已解决则新增）
+    /// ]]>
+    /// </summary>
     public class SignalAnalysisIterate : EntityBase
     {
         /// <summary>

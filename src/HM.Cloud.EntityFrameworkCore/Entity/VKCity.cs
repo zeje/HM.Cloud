@@ -3,7 +3,7 @@
 // Created: 2018年5月22日 15:16:06
 // Purpose: Definition of Class VKCity
 using System;
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     /// 城市表
     public class VKCity : EntityBase

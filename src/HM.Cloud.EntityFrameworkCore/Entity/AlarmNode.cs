@@ -1,11 +1,9 @@
-// File:    AlarmNode.cs
-// Author:  caizz
-// Created: 2018年5月22日 15:16:06
-// Purpose: Definition of Class AlarmNode
 using System;
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
+    /// <summary>
     /// 报警节点表
+    /// </summary>
     public class AlarmNode : EntityBase
     {
         /// <summary>

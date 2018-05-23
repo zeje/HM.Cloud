@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     public static class DbContextOptionsConfigurer
     {

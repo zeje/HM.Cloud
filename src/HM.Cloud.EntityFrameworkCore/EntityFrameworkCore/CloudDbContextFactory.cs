@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     /* This class is needed to run EF Core PMC commands. Not used anywhere else */
     public class CloudDbContextFactory : IDesignTimeDbContextFactory<CloudDbContext>

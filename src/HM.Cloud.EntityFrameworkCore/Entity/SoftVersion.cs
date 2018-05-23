@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     /// <summary>
     /// 软件版本

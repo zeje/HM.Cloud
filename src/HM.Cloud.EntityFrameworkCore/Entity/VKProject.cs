@@ -3,7 +3,7 @@
 // Created: 2018年5月22日 15:16:06
 // Purpose: Definition of Class VKProject
 using System;
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     /// <summary>
     ///  项目

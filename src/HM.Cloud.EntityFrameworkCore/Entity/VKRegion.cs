@@ -1,6 +1,6 @@
 
 using System;
-namespace HM.Cloud.EntityFrameworkCore
+namespace HM.Cloud
 {
     /// <summary>
     /// 大区

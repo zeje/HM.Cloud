@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
-namespace HM.Cloud.EntityFrameworkCore
+
+namespace HM.Cloud
 {
     /// <summary>
     /// 实体基类

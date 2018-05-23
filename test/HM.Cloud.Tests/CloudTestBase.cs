@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Abp.TestBase;
-using HM.Cloud.EntityFrameworkCore;
 using HM.Cloud.Tests.TestDatas;
 
 namespace HM.Cloud.Tests
