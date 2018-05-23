@@ -136,7 +136,7 @@ $(function () {
         $(".systemName").removeClass("selected");
         $(this).addClass("selected");
     });
-    debugger;
+
     // 主页打开初始化时显示第一个系统的菜单
     $('.systemName').eq('0').trigger('click');
 
@@ -356,7 +356,7 @@ function generateMenu(menuId, systemName) {
 
         var url = "./json/menu/menu_" + menuId + ".json";
         $.get(
-            url, {"levelId": "2"}, // 获取第一层目录
+            url, { "levelId": "2" }, // 获取第一层目录
             function (data) {
                 if (data == "0") {
                     window.location = "/Account";
@@ -423,7 +423,7 @@ function addTab(params) {
         //cls: 'leftBottomBorder'
     };
     var opts = $.extend(defaults, params);
-    var ifOpts = opts.iframe ? {content: iframe} : {href: params.url};
+    var ifOpts = opts.iframe ? { content: iframe } : { href: params.url };
     opts = $.extend(opts, ifOpts);
 
     if (t.iTabs('exists', opts.title)) {
