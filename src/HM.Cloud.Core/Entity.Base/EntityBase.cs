@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
+using Abp.Timing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,24 +12,24 @@ namespace HM.Cloud
     /// <summary>
     /// 实体基类
     /// </summary>
-    public class EntitySysBase : Entity<Guid>, IHasCreationTime, IHasModificationTime
+    public class EntityBase : Entity<long>, IHasCreationTime, IHasModificationTime
     {
         /// <summary>
         /// 
         /// </summary>
-        public EntitySysBase()
+        public EntityBase()
         {
-            CreationTime = DateTime.Now;
-            LastModificationTime = DateTime.Now;
+            CreationTime = Clock.Now;
+            LastModificationTime = Clock.Now;
         }
         /// <summary>
         /// 创建人
         /// </summary>
-        public virtual Guid CreatorUserId { get; set; }
+        public virtual long CreatorUserId { get; set; }
         /// <summary>
         /// 修改人
         /// </summary>
-        public virtual Guid LastModifierUserId { get; set; }
+        public virtual long LastModifierUserId { get; set; }
         /// <summary>
         /// 创建时间
         /// </summary>

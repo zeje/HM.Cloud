@@ -12,7 +12,7 @@ using System;
 namespace HM.Cloud.Migrations
 {
     [DbContext(typeof(CloudDbContext))]
-    [Migration("20180523141145_init-system")]
+    [Migration("20180524061339_init-system")]
     partial class initsystem
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
