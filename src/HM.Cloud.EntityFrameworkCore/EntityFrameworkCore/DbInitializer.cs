@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Abp.Timing;
+using System;
 using System.Collections.Generic;
 using System.Text;
-
 namespace HM.Cloud
 {
     public static class DbInitializer
@@ -10,46 +10,47 @@ namespace HM.Cloud
         {
             context.Database.EnsureCreated();
 
-            var users = new User[] {
-                new User(){
-                    Birthday = DateTime.Now,
-                    CreationTime = DateTime.Now,
-                    CreatorUserId = Guid.Empty,
+            var users = new List<User>();
+            for (int i = 0; i < 10; i++)
+            {
+                users.Add(new User()
+                {
+                    UserName = "test" + i,
+                    PassWord = "test" + i,
+                    TrueName = "test" + i,
+                    Sex = null,
+                    Birthday = Clock.Now,
+                    Phone = "",
                     Email = "",
                     IDCard = "",
-                    LastModificationTime = null,
-                    LastModifierUserId = Guid.Empty,
-                    LoginFailedTimes = 0,
-                    LoginCount = 0,
+                    UserStatus = UserStatus.启用,
                     LoginIp = "",
-                    PassWord = "",
-                    LoginTime = null,
-                    PasswordSetTime = DateTime.Now,
+                    LoginTime = Clock.Now,
+                    LoginCount = 0,
+                    LoginFailedTimes = null,
                     RegisterIp = "",
-                    Phone = "",
-                    RegisterTime = DateTime.Now,
-                    Sex = null,
-                    TrueName = "test",
-                    UserName = "test"
-                }
-            };
-
-
-
-            var pages = new Page[]
+                    RegisterTime = Clock.Now,
+                    PasswordSetTime = Clock.Now,
+                    Departments = null,
+                    UserRoles = null
+                });
+            }
+            context.Users.AddRange(users);
+            context.SaveChanges();
+            var pages = new List<Page>();
+            for (int i = 0; i < 10; i++)
             {
-                new Page(){
-                    CreationTime = DateTime.Now,
+                pages.Add(new Page()
+                {
+                    CreationTime = Clock.Now,
                     CreatorUserId = Guid.Empty,
                     Description = "",
                     Icon = "",
                     IsVisible = true,
                     LastModifierUserId = Guid.Empty,
-                    Name = "菜单",
-
-                }
-            };
-
+                    Name = "菜单" + i
+                });
+            }
             context.Pages.AddRange(pages);
             context.SaveChanges();
         }
