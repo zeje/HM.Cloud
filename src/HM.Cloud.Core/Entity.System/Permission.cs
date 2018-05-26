@@ -25,6 +25,7 @@ namespace HM.Cloud
         public Permission()
         {
             IsDeleted = false;
+            Sort = 0;
         }
         /// <summary>
         /// 权限类别
@@ -49,7 +50,7 @@ namespace HM.Cloud
         /// <summary>
         /// 序号(同级排序)
         /// </summary>
-        public int? Sort { get; set; }
+        public int Sort { get; set; }
         /// <summary>
         /// 是否已删除
         /// </summary>

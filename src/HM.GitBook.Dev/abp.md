@@ -1,1 +1,0 @@
-https://aspnetboilerplate.com/Pages/Documents/Introduction

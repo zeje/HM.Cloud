@@ -15,6 +15,13 @@
     <RootNamespace>HM.Cloud</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Seed\Tenants\**" />
+    <EmbeddedResource Remove="Seed\Tenants\**" />
+    <None Remove="Seed\Tenants\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Zeje.Core\Zeje.Core.csproj" />
+    <ProjectReference Include="..\..\Zeje.Utils\Zeje.Utils.csproj" />
     <ProjectReference Include="..\HM.Cloud.Core\HM.Cloud.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
@@ -28,13 +35,5 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
-      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Seed\Tenants\" />
   </ItemGroup>
 </Project>

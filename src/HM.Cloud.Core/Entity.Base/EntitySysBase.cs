@@ -19,6 +19,7 @@ namespace HM.Cloud
         /// </summary>
         public EntitySysBase()
         {
+            Id = Guid.NewGuid();
             CreationTime = Clock.Now;
             LastModificationTime = Clock.Now;
         }

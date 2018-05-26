@@ -12,7 +12,7 @@ namespace HM.Cloud
     {
         public Page()
         {
-
+            IsVisible = true;
         }
         /// <summary>
         /// 图片地址
