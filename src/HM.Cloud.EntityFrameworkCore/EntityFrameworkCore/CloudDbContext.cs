@@ -6,25 +6,6 @@ namespace HM.Cloud
 {
     public class CloudDbContext : AbpDbContext
     {
-        //Add DbSet properties for your entities...
-
-        public CloudDbContext(DbContextOptions<CloudDbContext> options)
-            : base(options)
-        {
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Permission>()
-                .HasDiscriminator<PermissionType>("PermissionType")
-                .HasValue<Permission>(PermissionType.Default)
-                .HasValue<Page>(PermissionType.Page)
-                .HasValue<Button>(PermissionType.Button)
-                .HasValue<Grid>(PermissionType.Grid)
-                .HasValue<GridField>(PermissionType.GridField);
-        }
-
         #region 系统权限部分
         /// <summary>
         /// 按钮
@@ -89,5 +70,22 @@ namespace HM.Cloud
         #endregion
 
         public DbSet<SoftVersion> SoftVersions { get; set; }
+
+        public CloudDbContext(DbContextOptions<CloudDbContext> options)
+            : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Permission>()
+                .HasDiscriminator<PermissionType>("PermissionType")
+                .HasValue<Permission>(PermissionType.Default)
+                .HasValue<Page>(PermissionType.Page)
+                .HasValue<Button>(PermissionType.Button)
+                .HasValue<Grid>(PermissionType.Grid)
+                .HasValue<GridField>(PermissionType.GridField);
+        }
     }
 }
