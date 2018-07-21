@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace HM.Cloud.EntityFrameworkCore
 {
-    public class SeedData
+    public static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {

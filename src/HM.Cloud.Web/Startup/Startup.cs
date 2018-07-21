@@ -58,6 +58,8 @@ namespace HM.Cloud.Web.Startup
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            EntityFrameworkCore.SeedData.Initialize(app.ApplicationServices); //初始化数据
         }
     }
 }
