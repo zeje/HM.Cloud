@@ -20,6 +20,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.Cloud.Web.Tests", "test\HM.Cloud.Web.Tests\HM.Cloud.Web.Tests.csproj", "{5D441612-29CA-4DAD-9945-B9DE11CE026C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{E7FBFD0A-7FEA-44E9-85B0-65DB3146755E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HM.GitBook.Dev", "src\HM.GitBook.Dev\", "{E27D98F1-ABC2-4F07-B157-55E8E5CCF1ED}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -42,9 +47,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HM.GitBook.Dev", "src\HM.Gi
 		SlnRelativePath = "src\HM.GitBook.Dev\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeje.Utils", "Zeje.Utils\Zeje.Utils.csproj", "{4C067634-F79E-4099-9201-4122915C8DD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zeje.Utils", "Zeje.Utils\Zeje.Utils.csproj", "{4C067634-F79E-4099-9201-4122915C8DD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeje.Core", "Zeje.Core\Zeje.Core.csproj", "{DBF443D0-EF1A-46FA-9FC2-EBA5C1DA062B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zeje.Core", "Zeje.Core\Zeje.Core.csproj", "{DBF443D0-EF1A-46FA-9FC2-EBA5C1DA062B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
