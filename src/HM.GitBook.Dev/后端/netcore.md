@@ -8,3 +8,5 @@
 > https://docs.microsoft.com/zh-cn/aspnet/core/data/ef-mvc/intro?view=aspnetcore-2.0
 
 ## 踩坑
+
+[AspNet Core下利用 app-metrics + Grafana + InfluxDB实现高大上的性能监控界面](https://www.cnblogs.com/linkanyway/p/metrics-grafana-influxdb-dotnet-core.html)
