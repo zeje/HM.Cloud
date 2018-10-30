@@ -8,7 +8,7 @@ namespace HM.Cloud.Web.Controllers
         public ActionResult Index()
         {
             var fvi = Utils.SiteHelper.GetFileVersionInfo();
-            ViewBag.UserName = "caizz@vanke.com";
+            ViewBag.UserName = "zezhi@163.com";
             ViewBag.PlatformName = fvi.ProductName;
             ViewBag.PlatformVersion = fvi.FileVersion;
             ViewBag.PlatformCopyright = fvi.LegalCopyright;
