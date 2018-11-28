@@ -10,3 +10,7 @@
 ## 踩坑
 
 [AspNet Core下利用 app-metrics + Grafana + InfluxDB实现高大上的性能监控界面](https://www.cnblogs.com/linkanyway/p/metrics-grafana-influxdb-dotnet-core.html)
+
+https://www.52abp.com/Download/Index
+
+https://www.jianshu.com/p/5e000c6bf991
